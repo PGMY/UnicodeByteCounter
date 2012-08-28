@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>UnicodeNyteCounter by PGMY</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>UnicodeNyteCounter</h1>
+        <p>UnicodeByteCounter</p>
+
+        <p class="view"><a href="https://github.com/PGMY/UnicodeByteCounter">View the Project on GitHub <small>PGMY/UnicodeByteCounter</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/PGMY/UnicodeByteCounter/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/PGMY/UnicodeByteCounter/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/PGMY/UnicodeByteCounter">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>UnicodeByteCounter for iphone app discription  </h1>
+
+<p>iPhone App申請時、詳細のところで4000byte(2000文字)って書いてあるんだけど<br>
+2000文字以内でも4000byte超えてるんだけど！ってエラーが。<br>
+１文字２バイトじゃない？？<br>
+-&gt;　Unicodeなのか！？一回ずつ試さないといけないの！？<br>
+的なところからバイト数カウンター作ってみた。  </p>
+
+<p>JSまだ勉強したてだし、文字コード理解し切れてないからおかしいところ誰か修正してくれたりするととっても喜ぶなーなんて。  </p>
+
+<h2>確認した動作環境 </h2>
+
+<h3>windows xp</h3>
+
+<p>google chrome<br>
+Internet Explorer 8  </p>
+
+<h2>メモ的な中身 </h2>
+
+<p>0x0000 - 0x007f : 1byte<br>
+0x0080 - 0x07ff : 2byte<br>
+0x0800 - 0xffff : 3byte  </p>
+
+<p>LF(0x0A)は2byteで計算<br>
+CR(0x0D)はどうも入ってきてないみたい？　-&gt;　とりあえず無視ってる  </p>
+
+<h2>変更ログとわからないところメモ</h2>
+
+<p>・どうもブラウザによって違うみたい　-&gt; 処理わけが必要かもorz<br>
+・CR + LF 時の処理をとりあえず入れておいてみた　（IE と Choromeで動くようになったはず）<br>
+・リアルタイムでカウントするように追加してみた　あれ？textareaの大きさってどうやって変えるんだ・ω・｀？<br>
+・テキストエリアの大きさも大きくしてとりあえず4000byte超えたら色を赤い文字で表示するようにしてみた<br>
+　（完全AppStore申請用だΣ）  </p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/PGMY">PGMY</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-34394741-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
